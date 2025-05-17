@@ -1,4 +1,4 @@
-import { Ref, useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   AppBar,
   Box,
@@ -55,14 +55,21 @@ export default function EntityPage<T>({
 
   const handleDelete = async (id: number) => {
     await deleteItem(id);
-    tableRef?.current?.refresh()
-  }
+    tableRef?.current?.refresh();
+  };
 
   const handleSuccess = () => {
     setDrawerOpen(false);
     setSelected(null);
     tableRef?.current?.refresh();
   };
+
+  const addButton = () => <Button color="inherit" onClick={() => {
+    setSelected(null);
+    setDrawerOpen(true);
+  }}>
+    Add Item
+  </Button>;
 
   return (
     <>
