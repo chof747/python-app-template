@@ -34,6 +34,12 @@ On MacOS do
 
 1. Clone the repo
 
+   - add the template as upstream repo:
+
+     ```sh
+     git remote add template https://github.com/chof747/python-app-template.git
+     ```
+
 2. Backend:
 
    - `cd bsackend`
@@ -42,6 +48,8 @@ On MacOS do
    - `pdm install`
    - `pdm run uvicorn app.main:app --reload`
    - Set your python interpreter in settings.json to `./backend/.venv/bin/python`
+
+   - Create the database directory for the backend and modify .env in backend
 
 3. Frontend:
 
