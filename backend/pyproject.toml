@@ -11,6 +11,7 @@ dev = [
     "flake8",
     "black",
     "pre-commit",
+    "httpx",
     "alembic>=1.15.2",
 ]
 
