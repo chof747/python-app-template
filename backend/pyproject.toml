@@ -17,6 +17,7 @@ dev = [
 
 [tool.pdm.scripts]
 migrate = "alembic upgrade head"
+migrationtest = "alembic/migration_test.sh"
 makemigration = "alembic revision --autogenerate -m"
 
 [tool.pdm]
